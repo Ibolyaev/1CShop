@@ -77,12 +77,22 @@
                                     <constraint firstAttribute="height" constant="100" id="zTS-8j-OWn"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBH-DI-3oT">
+                                <rect key="frame" x="181" y="426" width="53" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Catalog"/>
+                                <connections>
+                                    <segue destination="BQQ-NE-P4z" kind="show" id="8Ex-cU-2Z5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WR7-4D-06h" firstAttribute="leading" secondItem="gmV-9m-I8U" secondAttribute="leadingMargin" id="DE7-ON-4v5"/>
                             <constraint firstItem="WR7-4D-06h" firstAttribute="top" secondItem="Mra-ZO-Buh" secondAttribute="bottom" constant="39" id="DFH-ac-1ld"/>
+                            <constraint firstItem="dBH-DI-3oT" firstAttribute="centerX" secondItem="fLm-Mk-jNY" secondAttribute="centerX" id="KjW-95-ZDt"/>
+                            <constraint firstItem="dBH-DI-3oT" firstAttribute="top" secondItem="fLm-Mk-jNY" secondAttribute="bottom" constant="8" symbolic="YES" id="U8N-9q-gDn"/>
                             <constraint firstItem="WR7-4D-06h" firstAttribute="trailing" secondItem="gmV-9m-I8U" secondAttribute="trailingMargin" id="UlM-Y1-3bP"/>
                             <constraint firstItem="fLm-Mk-jNY" firstAttribute="centerX" secondItem="gmV-9m-I8U" secondAttribute="centerX" id="YEE-gn-DcZ"/>
                             <constraint firstItem="fLm-Mk-jNY" firstAttribute="centerY" secondItem="gmV-9m-I8U" secondAttribute="centerY" id="YbC-MU-ZU2"/>
@@ -97,6 +107,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t7H-lw-lhc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="842" y="437"/>
+        </scene>
+        <!--Catalog View Controller-->
+        <scene sceneID="Ckn-Ef-m9J">
+            <objects>
+                <tableViewController id="BQQ-NE-P4z" customClass="CatalogViewController" customModule="_CShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="L0E-Sf-Agb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Y5x-r5-G6H">
+                                <rect key="frame" x="0.0" y="92" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y5x-r5-G6H" id="zvz-IF-h0j">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BQQ-NE-P4z" id="sX7-hY-RMO"/>
+                            <outlet property="delegate" destination="BQQ-NE-P4z" id="47r-ah-Lj0"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pqM-NC-zUA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1310" y="437"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YCf-FO-1pb">

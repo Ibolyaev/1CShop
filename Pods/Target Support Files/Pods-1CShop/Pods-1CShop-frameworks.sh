@@ -85,6 +85,7 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-1CShop/AFNetworking.framework"
+  install_framework "Pods-1CShop/Alamofire.framework"
   install_framework "Pods-1CShop/Bolts.framework"
   install_framework "Pods-1CShop/CocoaLumberjack.framework"
   install_framework "Pods-1CShop/FBSDKCoreKit.framework"
@@ -93,10 +94,14 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-1CShop/Lock.framework"
   install_framework "Pods-1CShop/LockFacebook.framework"
   install_framework "Pods-1CShop/MBProgressHUD.framework"
+  install_framework "Pods-1CShop/Realm.framework"
+  install_framework "Pods-1CShop/RealmSwift.framework"
   install_framework "Pods-1CShop/SimpleKeychain.framework"
+  install_framework "Pods-1CShop/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-1CShop/AFNetworking.framework"
+  install_framework "Pods-1CShop/Alamofire.framework"
   install_framework "Pods-1CShop/Bolts.framework"
   install_framework "Pods-1CShop/CocoaLumberjack.framework"
   install_framework "Pods-1CShop/FBSDKCoreKit.framework"
@@ -105,5 +110,8 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-1CShop/Lock.framework"
   install_framework "Pods-1CShop/LockFacebook.framework"
   install_framework "Pods-1CShop/MBProgressHUD.framework"
+  install_framework "Pods-1CShop/Realm.framework"
+  install_framework "Pods-1CShop/RealmSwift.framework"
   install_framework "Pods-1CShop/SimpleKeychain.framework"
+  install_framework "Pods-1CShop/SwiftyJSON.framework"
 fi
