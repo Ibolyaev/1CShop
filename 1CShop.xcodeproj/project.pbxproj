@@ -12,11 +12,16 @@
 		30A9D0721BF5E497008A2CE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A9D0701BF5E497008A2CE2 /* Main.storyboard */; };
 		30A9D0741BF5E497008A2CE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30A9D0731BF5E497008A2CE2 /* Assets.xcassets */; };
 		30A9D0771BF5E497008A2CE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A9D0751BF5E497008A2CE2 /* LaunchScreen.storyboard */; };
+		30DBCC1D1C033B5D00494AD5 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DBCC1C1C033B5D00494AD5 /* ImageCell.swift */; };
+		30DBCC1F1C03474300494AD5 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DBCC1E1C03474300494AD5 /* TableViewCell.swift */; };
+		30DBCC241C045B6700494AD5 /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DBCC231C045B6700494AD5 /* ImagesViewController.swift */; };
+		30DBCC271C05D06A00494AD5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DBCC261C05D06A00494AD5 /* User.swift */; };
 		30F583121BF5FABC00298A55 /* MyApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F583111BF5FABC00298A55 /* MyApplication.swift */; };
-		30F583151BF5FFA200298A55 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F583131BF5FFA200298A55 /* HomeViewController.swift */; };
-		30F583161BF5FFA200298A55 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F583141BF5FFA200298A55 /* ProfileViewController.swift */; };
 		30F583211BFB0ED300298A55 /* NomenclatureCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F583201BFB0ED300298A55 /* NomenclatureCatalog.swift */; };
 		30F583271BFB237700298A55 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F583261BFB237700298A55 /* CatalogViewController.swift */; };
+		30F5832B1BFDCC0100298A55 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F583291BFDCC0100298A55 /* HomeViewController.swift */; };
+		30F5832C1BFDCC0100298A55 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F5832A1BFDCC0100298A55 /* ProfileViewController.swift */; };
+		30F5832F1BFDF77E00298A55 /* PriceInformationRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F5832E1BFDF77E00298A55 /* PriceInformationRegister.swift */; };
 		A757871D50501AB84132506B /* Pods_1CShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C58BC7AA5881D794438A86E /* Pods_1CShop.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,11 +34,16 @@
 		30A9D0731BF5E497008A2CE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30A9D0761BF5E497008A2CE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30A9D0781BF5E497008A2CE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30DBCC1C1C033B5D00494AD5 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		30DBCC1E1C03474300494AD5 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		30DBCC231C045B6700494AD5 /* ImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
+		30DBCC261C05D06A00494AD5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		30F583111BF5FABC00298A55 /* MyApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyApplication.swift; sourceTree = "<group>"; };
-		30F583131BF5FFA200298A55 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = "../../../Downloads/native-mobile-samples-sample/SwiftSample/HomeViewController.swift"; sourceTree = "<group>"; };
-		30F583141BF5FFA200298A55 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = "../../../Downloads/native-mobile-samples-sample/SwiftSample/ProfileViewController.swift"; sourceTree = "<group>"; };
 		30F583201BFB0ED300298A55 /* NomenclatureCatalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NomenclatureCatalog.swift; sourceTree = "<group>"; };
 		30F583261BFB237700298A55 /* CatalogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
+		30F583291BFDCC0100298A55 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		30F5832A1BFDCC0100298A55 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		30F5832E1BFDF77E00298A55 /* PriceInformationRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceInformationRegister.swift; sourceTree = "<group>"; };
 		9497959651CBE293725869C0 /* Pods-1CShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1CShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-1CShop/Pods-1CShop.release.xcconfig"; sourceTree = "<group>"; };
 		9A541063A1B6C423F4E6991C /* Pods-1CShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1CShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-1CShop/Pods-1CShop.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,9 +90,11 @@
 		30A9D06B1BF5E497008A2CE2 /* 1CShop */ = {
 			isa = PBXGroup;
 			children = (
+				30F5832E1BFDF77E00298A55 /* PriceInformationRegister.swift */,
 				30F583201BFB0ED300298A55 /* NomenclatureCatalog.swift */,
-				30F583131BF5FFA200298A55 /* HomeViewController.swift */,
-				30F583141BF5FFA200298A55 /* ProfileViewController.swift */,
+				30F583291BFDCC0100298A55 /* HomeViewController.swift */,
+				30DBCC1C1C033B5D00494AD5 /* ImageCell.swift */,
+				30F5832A1BFDCC0100298A55 /* ProfileViewController.swift */,
 				30A9D06C1BF5E497008A2CE2 /* AppDelegate.swift */,
 				30A9D06E1BF5E497008A2CE2 /* ViewController.swift */,
 				30A9D0701BF5E497008A2CE2 /* Main.storyboard */,
@@ -91,6 +103,9 @@
 				30A9D0781BF5E497008A2CE2 /* Info.plist */,
 				30F583111BF5FABC00298A55 /* MyApplication.swift */,
 				30F583261BFB237700298A55 /* CatalogViewController.swift */,
+				30DBCC1E1C03474300494AD5 /* TableViewCell.swift */,
+				30DBCC231C045B6700494AD5 /* ImagesViewController.swift */,
+				30DBCC261C05D06A00494AD5 /* User.swift */,
 			);
 			path = 1CShop;
 			sourceTree = "<group>";
@@ -227,11 +242,16 @@
 			files = (
 				30F583271BFB237700298A55 /* CatalogViewController.swift in Sources */,
 				30A9D06F1BF5E497008A2CE2 /* ViewController.swift in Sources */,
+				30DBCC1D1C033B5D00494AD5 /* ImageCell.swift in Sources */,
 				30F583121BF5FABC00298A55 /* MyApplication.swift in Sources */,
-				30F583161BF5FFA200298A55 /* ProfileViewController.swift in Sources */,
 				30A9D06D1BF5E497008A2CE2 /* AppDelegate.swift in Sources */,
+				30DBCC271C05D06A00494AD5 /* User.swift in Sources */,
+				30DBCC1F1C03474300494AD5 /* TableViewCell.swift in Sources */,
+				30DBCC241C045B6700494AD5 /* ImagesViewController.swift in Sources */,
+				30F5832C1BFDCC0100298A55 /* ProfileViewController.swift in Sources */,
 				30F583211BFB0ED300298A55 /* NomenclatureCatalog.swift in Sources */,
-				30F583151BF5FFA200298A55 /* HomeViewController.swift in Sources */,
+				30F5832B1BFDCC0100298A55 /* HomeViewController.swift in Sources */,
+				30F5832F1BFDF77E00298A55 /* PriceInformationRegister.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

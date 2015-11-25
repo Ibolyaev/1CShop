@@ -1,13 +1,10 @@
 //
 //	NomenclatureCatalog.swift
-//	Model file Generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
-
 
 import RealmSwift
-import Realm
 import SwiftyJSON
 
-class NomenclatureCatalog : Object {
+final class NomenclatureCatalog : Object, ResponseObjectSerializable, ResponseCollectionSerializable  {
 
 	dynamic var code : String! = ""
 	dynamic var deletionMark : Bool = false
@@ -19,9 +16,94 @@ class NomenclatureCatalog : Object {
 	dynamic var описание : String! = ""
     dynamic var файлКартинкиKey : String! = ""
     
+    /*dynamic var imageUrl : String! = "http://85.236.15.246/Demo_UT/odata/standard.odata/InformationRegister_%D0%9F%D1%80%D0%B8%D1%81%D0%BE%D0%B5%D0%B4%D0%B8%D0%BD%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5%D0%A4%D0%B0%D0%B9%D0%BB%D1%8B?$format=json"*/
+    dynamic var imageUrl : String! = "http://85.236.15.246/"
     
-	
-	/**
+    override static func primaryKey() -> String? {
+        return "refKey"
+    }
+    dynamic var price : Double {
+        get{
+            
+            if self.refKey != ""{
+                
+                print(self.refKey)
+                
+                let realm = try! Realm()
+                
+                let prices = realm.objects(PriceInformationRegister).filter("nomenclatureKey = '\(self.refKey)'")
+                   
+                for price in prices {
+                    return price.цена
+                }
+            }
+            
+            return 0
+            
+        }
+    }
+    
+    convenience required init(response: NSHTTPURLResponse, representation: JSON) {
+        self.init()
+        let dictionary = representation.dictionaryObject!
+        
+        if let codeValue = dictionary["Code"] as? String{
+            self.code = codeValue
+        }
+        if let deletionMarkValue = dictionary["DeletionMark"] as? Bool{
+            self.deletionMark = deletionMarkValue
+        }
+        if let descriptionFieldValue = dictionary["Description"] as? String{
+            self.descriptionField = descriptionFieldValue
+        }
+        if let isFolderValue = dictionary["IsFolder"] as? Bool{
+            self.isFolder = isFolderValue
+        }
+        if let parentKeyValue = dictionary["Parent_Key"] as? String{
+            self.parentKey = parentKeyValue
+        }
+        if let refKeyValue = dictionary["Ref_Key"] as? String{
+            self.refKey = refKeyValue
+        }
+        if let odatametadataValue = dictionary["odata.metadata"] as? String{
+            self.odatametadata = odatametadataValue
+        }
+        if let описаниеValue = dictionary["Описание"] as? String{
+            self.описание = описаниеValue
+        }
+        
+        if let файлКартинкиKeyValue = dictionary["ФайлКартинки_Key"] as? String{
+            self.файлКартинкиKey = файлКартинкиKeyValue
+        }
+        
+    }
+    
+    static func collection(response response: NSHTTPURLResponse, representation: JSON) -> [NomenclatureCatalog] {
+        var products: [NomenclatureCatalog] = []
+        
+        for (index,subJson):(String, JSON) in representation["value"] {
+            
+            products.append(NomenclatureCatalog(response: response, representation: subJson))
+            
+        }
+        
+        return products
+    }
+    
+    
+    @objc func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(code, forKey: "code")
+        aCoder.encodeObject(deletionMark, forKey: "deletionMark")
+        aCoder.encodeObject(descriptionField, forKey: "descriptionField")
+        aCoder.encodeObject(isFolder, forKey: "isFolder")
+        aCoder.encodeObject(parentKey, forKey: "parentKey")
+        aCoder.encodeObject(refKey, forKey: "refKey")
+        aCoder.encodeObject(odatametadata, forKey: "odatametadata")
+        aCoder.encodeObject(описание, forKey: "описание")
+        aCoder.encodeObject(файлКартинкиKey, forKey: "файлКартинкиKey")
+    }
+    
+    /**
 	 * Returns all the available property values in the form of NSDictionary object where the key is the approperiate json key and the value is the value of the corresponding property
 	 */
 	func toDictionary() -> NSDictionary
@@ -52,39 +134,7 @@ class NomenclatureCatalog : Object {
 		}
 		return dictionary
 	}
-
-    /**
-     * Instantiate the instance using the passed json values to set the properties values
-     */
-    
-    
-    
-    /*init (value: JSON!){
-        if value == nil{
-            return
-        }
-        super.init()
-        
-        code = value["Code"].stringValue
-        deletionMark = value["DeletionMark"].boolValue
-        descriptionField = value["Description"].stringValue
-        isFolder = value["IsFolder"].boolValue
-        parentKey = value["Parent_Key"].stringValue
-        refKey = value["Ref_Key"].stringValue
-        odatametadata = value["odata.metadata"].stringValue
-        описание = value["Описание"].stringValue
-        файлКартинкиKey = value["ФайлКартинки_Key"].stringValue
-        
-    }
-
-    required init() {
-        super.init()
-        fatalError("init() has not been implemented")
-    }*/
-
-    
-    
-    
+   
 }
 
     

@@ -86,6 +86,7 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-1CShop/AFNetworking.framework"
   install_framework "Pods-1CShop/Alamofire.framework"
+  install_framework "Pods-1CShop/AlamofireImage.framework"
   install_framework "Pods-1CShop/Bolts.framework"
   install_framework "Pods-1CShop/CocoaLumberjack.framework"
   install_framework "Pods-1CShop/FBSDKCoreKit.framework"
@@ -102,6 +103,7 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-1CShop/AFNetworking.framework"
   install_framework "Pods-1CShop/Alamofire.framework"
+  install_framework "Pods-1CShop/AlamofireImage.framework"
   install_framework "Pods-1CShop/Bolts.framework"
   install_framework "Pods-1CShop/CocoaLumberjack.framework"
   install_framework "Pods-1CShop/FBSDKCoreKit.framework"

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "static Request.(imageResponseSerializer(Request.Type) -&gt; (imageScale : CGFloat, inflateResponseImage : Bool) -&gt; ResponseSerializer&lt;UIImage, NSError&gt;).(closure #1):Request+AlamofireImage.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "validData = data where validData.length &gt; 0">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CatalogViewController.(add(CatalogViewController) -&gt; () -&gt; ()).(closure #4):CatalogViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "subJson[&quot;&#x41f;&#x440;&#x438;&#x441;&#x43e;&#x435;&#x434;&#x438;&#x43d;&#x435;&#x43d;&#x43d;&#x44b;&#x439;&#x424;&#x430;&#x439;&#x43b;&quot;].stringValue">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CatalogViewController.tableView(UITableView, cellForRowAtIndexPath : NSIndexPath) -&gt; UITableViewCell:CatalogViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "object.&#x444;&#x430;&#x439;&#x43b;&#x41a;&#x430;&#x440;&#x442;&#x438;&#x43d;&#x43a;&#x438;Key">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ImageCell.(configureCellWithURLString(ImageCell) -&gt; (String, placeholderImage : UIImage) -&gt; ()).(closure #1):ImageCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "json[&quot;value&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AppDelegate.application(UIApplication, didFinishLaunchingWithOptions : [NSObject : AnyObject]?) -&gt; Bool:AppDelegate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "schemaVersion">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "NomenclatureCatalog.price.getter:NomenclatureCatalog.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ImagesViewController.collectionView(UICollectionView, cellForItemAtIndexPath : NSIndexPath) -&gt; UICollectionViewCell:ImagesViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ImageCell.configureCellWithURLString(String, placeholderImage : UIImage) -&gt; ():ImageCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "URLString">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ImagesViewController.((preLoadPictures in _15186DEA41182C13AC438F6462AF4504)(ImagesViewController) -&gt; () -&gt; ()).(closure #1):ImagesViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "subJson[&quot;&#x41f;&#x440;&#x438;&#x441;&#x43e;&#x435;&#x434;&#x438;&#x43d;&#x435;&#x43d;&#x43d;&#x44b;&#x439;&#x424;&#x430;&#x439;&#x43b;&quot;].stringValue">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "UIImageView.af_setImageWithURLRequest(URLRequestConvertible, placeholderImage : UIImage?, filter : ImageFilter?, imageTransition : UIImageView.ImageTransition, completion : (Response&lt;UIImage, NSError&gt;) -&gt; ()?) -&gt; ():UIImageView+AlamofireImage.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "URLRequest.URLRequest.NSURL!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CatalogViewController.(tableView(CatalogViewController) -&gt; (UITableView, cellForRowAtIndexPath : NSIndexPath) -&gt; UITableViewCell).(closure #1):CatalogViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "subJson[&quot;&#x425;&#x440;&#x430;&#x43d;&#x438;&#x43c;&#x44b;&#x439;&#x424;&#x430;&#x439;&#x43b;_Base64Data&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "User.init(response : NSHTTPURLResponse, representation : AnyObject) -&gt; User?:User.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response.URL?.description">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CatalogViewController.(add(CatalogViewController) -&gt; () -&gt; ()).(closure #1):CatalogViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response.result.value">
+            </PersistentString>
+            <PersistentString
+               value = "json.dictionaryObject">
+            </PersistentString>
+            <PersistentString
+               value = "json[&quot;Code&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AutoPurgingImageCache.(imageWithIdentifier(AutoPurgingImageCache) -&gt; (String) -&gt; UIImage?).(closure #1):ImageCache.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.cachedImages">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
