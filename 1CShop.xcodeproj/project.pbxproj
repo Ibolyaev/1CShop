@@ -23,6 +23,8 @@
 		30F5832C1BFDCC0100298A55 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F5832A1BFDCC0100298A55 /* ProfileViewController.swift */; };
 		30F5832F1BFDF77E00298A55 /* PriceInformationRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F5832E1BFDF77E00298A55 /* PriceInformationRegister.swift */; };
 		A757871D50501AB84132506B /* Pods_1CShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C58BC7AA5881D794438A86E /* Pods_1CShop.framework */; };
+		BD05E8E31C06263D0008AAF0 /* OdataConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD05E8E21C06263D0008AAF0 /* OdataConnector.swift */; };
+		BD05E8E51C0627AC0008AAF0 /* oDataFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD05E8E41C0627AC0008AAF0 /* oDataFilter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		30F5832E1BFDF77E00298A55 /* PriceInformationRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceInformationRegister.swift; sourceTree = "<group>"; };
 		9497959651CBE293725869C0 /* Pods-1CShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1CShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-1CShop/Pods-1CShop.release.xcconfig"; sourceTree = "<group>"; };
 		9A541063A1B6C423F4E6991C /* Pods-1CShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-1CShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-1CShop/Pods-1CShop.debug.xcconfig"; sourceTree = "<group>"; };
+		BD05E8E21C06263D0008AAF0 /* OdataConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OdataConnector.swift; sourceTree = "<group>"; };
+		BD05E8E41C0627AC0008AAF0 /* oDataFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = oDataFilter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				30DBCC1E1C03474300494AD5 /* TableViewCell.swift */,
 				30DBCC231C045B6700494AD5 /* ImagesViewController.swift */,
 				30DBCC261C05D06A00494AD5 /* User.swift */,
+				BD05E8E21C06263D0008AAF0 /* OdataConnector.swift */,
+				BD05E8E41C0627AC0008AAF0 /* oDataFilter.swift */,
 			);
 			path = 1CShop;
 			sourceTree = "<group>";
@@ -245,7 +251,9 @@
 				30DBCC1D1C033B5D00494AD5 /* ImageCell.swift in Sources */,
 				30F583121BF5FABC00298A55 /* MyApplication.swift in Sources */,
 				30A9D06D1BF5E497008A2CE2 /* AppDelegate.swift in Sources */,
+				BD05E8E31C06263D0008AAF0 /* OdataConnector.swift in Sources */,
 				30DBCC271C05D06A00494AD5 /* User.swift in Sources */,
+				BD05E8E51C0627AC0008AAF0 /* oDataFilter.swift in Sources */,
 				30DBCC1F1C03474300494AD5 /* TableViewCell.swift in Sources */,
 				30DBCC241C045B6700494AD5 /* ImagesViewController.swift in Sources */,
 				30F5832C1BFDCC0100298A55 /* ProfileViewController.swift in Sources */,

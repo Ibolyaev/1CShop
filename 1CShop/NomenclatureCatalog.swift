@@ -90,6 +90,10 @@ final class NomenclatureCatalog : Object, ResponseObjectSerializable, ResponseCo
         return products
     }
     
+    class func getCollectionName() -> String {
+        return "/Catalog_Номенклатура?"
+    }
+    
     
     @objc func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(code, forKey: "code")

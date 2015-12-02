@@ -30,6 +30,7 @@ class CatalogViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupDemoBase()
         print(Realm.Configuration.defaultConfiguration.description)
         setupUI()
         
@@ -40,6 +41,17 @@ class CatalogViewController: UITableViewController {
         
         tableView.reloadData()
     }
+    
+    func setupDemoBase() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject("http://85.236.15.246", forKey: "address")
+        defaults.setObject("Demo_UT", forKey: "baseName")
+        defaults.setObject(true, forKey: "demoMode")
+        defaults.setObject("test", forKey: "user")
+        defaults.setObject("111", forKey: "password")
+    }
+
+    
     // UI
     
     func setupUI() {
@@ -91,13 +103,17 @@ class CatalogViewController: UITableViewController {
             self.realm.deleteAll()
         }
         
-        let user = "test"
-        let password = "111"
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let user = defaults.stringForKey("user")
+        let password = defaults.stringForKey("password")
         
         let credentialData = "\(user):\(password)".dataUsingEncoding(NSUTF8StringEncoding)!
         let base64Credentials = credentialData.base64EncodedStringWithOptions([])
         
         let headers = ["Authorization": "Basic \(base64Credentials)"]
+        
+        let URLString = OdataConnector().getTextRequestToCollection(nil)
+        
         // TODO
         //need to add produt guid to get just one picture (guid'9b137475-35ed-11e5-940e-e41f133f24ac')
         
@@ -105,7 +121,7 @@ class CatalogViewController: UITableViewController {
         
         //let URLString = "http://85.236.15.246/Demo_UT/odata/standard.odata/Catalog_%D0%9D%D0%BE%D0%BC%D0%B5%D0%BD%D0%BA%D0%BB%D0%B0%D1%82%D1%83%D1%80%D0%B0?$format=json"
         
-        let URLString = "http://85.236.15.246/Demo_UT/odata/standard.odata/Catalog_%D0%9D%D0%BE%D0%BC%D0%B5%D0%BD%D0%BA%D0%BB%D0%B0%D1%82%D1%83%D1%80%D0%B0?$format=json"
+        /*let URLString = "http://85.236.15.246/Demo_UT/odata/standard.odata/Catalog_%D0%9D%D0%BE%D0%BC%D0%B5%D0%BD%D0%BA%D0%BB%D0%B0%D1%82%D1%83%D1%80%D0%B0?$format=json"*/
         
         //test
         Alamofire.request(.GET, URLString, headers: headers)
