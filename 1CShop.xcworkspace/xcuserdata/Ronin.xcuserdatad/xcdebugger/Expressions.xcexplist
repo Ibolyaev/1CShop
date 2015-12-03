@@ -11,10 +11,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "CatalogViewController.(add(CatalogViewController) -&gt; () -&gt; ()).(closure #4):CatalogViewController.swift">
+         contextName = "AutoPurgingImageCache.(imageWithIdentifier(AutoPurgingImageCache) -&gt; (String) -&gt; UIImage?).(closure #1):ImageCache.swift">
          <PersistentStrings>
             <PersistentString
-               value = "subJson[&quot;&#x41f;&#x440;&#x438;&#x441;&#x43e;&#x435;&#x434;&#x438;&#x43d;&#x435;&#x43d;&#x43d;&#x44b;&#x439;&#x424;&#x430;&#x439;&#x43b;&quot;].stringValue">
+               value = "self.cachedImages">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -57,18 +57,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "ImagesViewController.((preLoadPictures in _15186DEA41182C13AC438F6462AF4504)(ImagesViewController) -&gt; () -&gt; ()).(closure #1):ImagesViewController.swift">
+         contextName = "CatalogViewController.add() -&gt; ():CatalogViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "subJson[&quot;&#x41f;&#x440;&#x438;&#x441;&#x43e;&#x435;&#x434;&#x438;&#x43d;&#x435;&#x43d;&#x43d;&#x44b;&#x439;&#x424;&#x430;&#x439;&#x43b;&quot;].stringValue">
+               value = "&quot;Authorization&quot;: &quot;Basic \(base64Credentials)&quot;">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "UIImageView.af_setImageWithURLRequest(URLRequestConvertible, placeholderImage : UIImage?, filter : ImageFilter?, imageTransition : UIImageView.ImageTransition, completion : (Response&lt;UIImage, NSError&gt;) -&gt; ()?) -&gt; ():UIImageView+AlamofireImage.swift">
+         contextName = "ImagesViewController.((preLoadPictures in _15186DEA41182C13AC438F6462AF4504)(ImagesViewController) -&gt; () -&gt; ()).(closure #1):ImagesViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "URLRequest.URLRequest.NSURL!">
+               value = "subJson[&quot;&#x41f;&#x440;&#x438;&#x441;&#x43e;&#x435;&#x434;&#x438;&#x43d;&#x435;&#x43d;&#x43d;&#x44b;&#x439;&#x424;&#x430;&#x439;&#x43b;&quot;].stringValue">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -81,10 +81,26 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "UIImageView.af_setImageWithURLRequest(URLRequestConvertible, placeholderImage : UIImage?, filter : ImageFilter?, imageTransition : UIImageView.ImageTransition, completion : (Response&lt;UIImage, NSError&gt;) -&gt; ()?) -&gt; ():UIImageView+AlamofireImage.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "URLRequest.URLRequest.NSURL!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "User.init(response : NSHTTPURLResponse, representation : AnyObject) -&gt; User?:User.swift">
          <PersistentStrings>
             <PersistentString
                value = "response.URL?.description">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CatalogViewController.(add(CatalogViewController) -&gt; () -&gt; ()).(closure #4):CatalogViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "subJson[&quot;&#x41f;&#x440;&#x438;&#x441;&#x43e;&#x435;&#x434;&#x438;&#x43d;&#x435;&#x43d;&#x43d;&#x44b;&#x439;&#x424;&#x430;&#x439;&#x43b;&quot;].stringValue">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -99,14 +115,6 @@
             </PersistentString>
             <PersistentString
                value = "json[&quot;Code&quot;]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "AutoPurgingImageCache.(imageWithIdentifier(AutoPurgingImageCache) -&gt; (String) -&gt; UIImage?).(closure #1):ImageCache.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.cachedImages">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
