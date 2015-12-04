@@ -4,8 +4,9 @@
 
 
 import RealmSwift
+import SwiftyJSON
 
-class PriceInformationRegister : Object {
+final class PriceInformationRegister : Object, ResponseObjectSerializable, ResponseCollectionSerializable {
 
 	dynamic var period : String!
 	dynamic var recorder : String!
@@ -26,43 +27,67 @@ class PriceInformationRegister : Object {
 	/**
 	 * Instantiate the instance using the passed dictionary values to set the properties values
 	 */
-	class func fromDictionary(dictionary: NSDictionary) -> PriceInformationRegister	{
-		let this = PriceInformationRegister()
+	convenience required init(response: NSHTTPURLResponse, representation: JSON) {	
+        self.init()
+        let dictionary = representation.dictionaryObject!
+        
 		if let periodValue = dictionary["Period"] as? String{
-			this.period = periodValue
+			self.period = periodValue
 		}
 		if let recorderValue = dictionary["Recorder"] as? String{
-			this.recorder = recorderValue
+			self.recorder = recorderValue
 		}
 		if let recorderTypeValue = dictionary["Recorder_Type"] as? String{
-			this.recorderType = recorderTypeValue
+			self.recorderType = recorderTypeValue
 		}
 		if let валютаKeyValue = dictionary["Валюта_Key"] as? String{
-			this.валютаKey = валютаKeyValue
+			self.валютаKey = валютаKeyValue
 		}
 		if let видЦеныKeyValue = dictionary["ВидЦены_Key"] as? String{
-			this.видЦеныKey = видЦеныKeyValue
+			self.видЦеныKey = видЦеныKeyValue
 		}
 		if let номенклатураnavigationLinkUrlValue = dictionary["Номенклатура@navigationLinkUrl"] as? String{
-			this.номенклатураnavigationLinkUrl = номенклатураnavigationLinkUrlValue
+			self.номенклатураnavigationLinkUrl = номенклатураnavigationLinkUrlValue
 		}
 		if let номенклатураKeyValue = dictionary["Номенклатура_Key"] as? String{
-			this.nomenclatureKey = номенклатураKeyValue
+			self.nomenclatureKey = номенклатураKeyValue
 		}
 		if let упаковкаKeyValue = dictionary["Упаковка_Key"] as? String{
-			this.упаковкаKey = упаковкаKeyValue
+			self.упаковкаKey = упаковкаKeyValue
 		}
 		if let характеристикаKeyValue = dictionary["Характеристика_Key"] as? String{
-			this.характеристикаKey = характеристикаKeyValue
+			self.характеристикаKey = характеристикаKeyValue
 		}
 		if let ценаValue = dictionary["Цена"] as? Double{
-			this.цена = ценаValue
+			self.цена = ценаValue
 		}
         
-        this.refKey = "\(this.nomenclatureKey!)|\(this.характеристикаKey!)|\(this.видЦеныKey!)"
-        
-		return this
+        self.refKey = "\(self.nomenclatureKey!)|\(self.характеристикаKey!)|\(self.видЦеныKey!)"
+        //print(self.refKey )
+		
 	}
+    static func collection(response response: NSHTTPURLResponse, representation: JSON) -> [PriceInformationRegister] {
+        var products: [PriceInformationRegister] = []
+        
+        for (index,subJson):(String, JSON) in representation["value"] {
+            //print(subJson)
+            products.append(PriceInformationRegister(response: response, representation: subJson))
+            
+            
+            
+            /*for (index,subJsonRecordSet):(String, JSON) in subJson["RecordSet"] {
+            
+            }*/
+            
+            
+        }
+        
+        return products
+    }
+    
+    class func getCollectionName() -> String {
+        return "/InformationRegister_ЦеныНоменклатуры_RecordType/SliceLast()?"
+    }
 
 	/**
 	 * Returns all the available property values in the form of NSDictionary object where the key is the approperiate json key and the value is the value of the corresponding property

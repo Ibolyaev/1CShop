@@ -75,12 +75,12 @@ class ImagesViewController: UIViewController {
         Alamofire.request(.GET, URLString, headers: headers)
             .responseObject { (response: Response<NomenclatureCatalog, NSError>) in
                 debugPrint(response)
+                
         }
         
         
         
-        
-        
+                
         /*Alamofire.request(.GET, URLString, headers: headers)
             .responseJSON { response in
                 switch response.result {

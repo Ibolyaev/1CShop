@@ -72,8 +72,8 @@ class CatalogViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! Cell
         
         let object = array[indexPath.row]
-        cell.textLabel?.text = object.code
-        cell.detailTextLabel?.text = object.descriptionField
+        cell.textLabel?.text = object.descriptionField
+        cell.detailTextLabel?.text = object.price.description
         
         return cell
     }
@@ -133,12 +133,18 @@ class CatalogViewController: UITableViewController {
         
         let user = defaults.stringForKey("user")!
         let password = defaults.stringForKey("password")!
-        print(user,password)
-        
         let credentialData = "\(user):\(password)".dataUsingEncoding(NSUTF8StringEncoding)!
         let base64Credentials = credentialData.base64EncodedStringWithOptions([])
         
         let headers = ["Authorization": "Basic \(base64Credentials)"]
+        
+        //load prices
+        connector.setCollectionName(PriceInformationRegister.getCollectionName())
+        
+        
+        
+        
+        
         Alamofire.request(.GET, URLString, headers: headers)
             .responseCollection { (response: Response<[NomenclatureCatalog], NSError>) in
                 debugPrint(response)
@@ -150,6 +156,18 @@ class CatalogViewController: UITableViewController {
                         })
                     }
                     
+                    Alamofire.request(.GET, connector.getTextRequestToCollection(nil), headers: headers)
+                        .responseCollection { (response: Response<[PriceInformationRegister], NSError>) in
+                            debugPrint(response)
+                            if let value = response.result.value {
+                                try! self.realm.write({
+                                    self.realm.add(value)
+                                })
+                            }
+                    }
+
+                    
+                    
                 }
                 
                 
@@ -158,6 +176,7 @@ class CatalogViewController: UITableViewController {
                     debugPrint(errorJson)
                 }
         }
+        
         /*Alamofire.request(.GET, URLString, headers: headers)
             .responseObject { (response: Response<NomenclatureCatalog, NSError>) in
                 debugPrint(response)

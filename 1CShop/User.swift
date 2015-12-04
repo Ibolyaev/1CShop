@@ -43,6 +43,7 @@ extension Alamofire.Request {
             switch result {
             case .Success(let value):
                 let json = JSON(value)
+                
                 if let response = response {
                     return .Success(T.collection(response: response, representation: json))
                 } else {
