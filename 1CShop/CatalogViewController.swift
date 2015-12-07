@@ -18,16 +18,6 @@ class CatalogViewController: UITableViewController {
     let array = try! Realm().objects(NomenclatureCatalog).sorted("descriptionField")
     var notificationToken: NotificationToken?
     
-    class Cell: UITableViewCell {
-        override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
-            super.init(style: .Subtitle, reuseIdentifier: reuseIdentifier)
-        }
-        
-        required init(coder: NSCoder) {
-            fatalError("NSCoding not supported")
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupDemoBase()
@@ -55,11 +45,11 @@ class CatalogViewController: UITableViewController {
     // UI
     
     func setupUI() {
-        tableView.registerClass(Cell.self, forCellReuseIdentifier: "cell")
+        //tableView.registerClass(TableViewCell.self, forCellReuseIdentifier: "cell")
         
-        self.title = "TableView"
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "BG Add", style: .Plain, target: self, action: "backgroundAdd")
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "add")
+        self.tabBarController?.navigationItem.leftBarButtonItems?.append(UIBarButtonItem(title: "BG Add", style: .Plain, target: self, action: "backgroundAdd"))
+        //self.tabBarController?.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "BG Add", style: .Plain, target: self, action: "backgroundAdd")
+        self.tabBarController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "add")
     }
     
     // Table view data source
@@ -69,11 +59,18 @@ class CatalogViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! Cell
+        let cell = tableView.dequeueReusableCellWithIdentifier("TableViewCell", forIndexPath: indexPath) as! TableViewCell
         
         let object = array[indexPath.row]
-        cell.textLabel?.text = object.descriptionField
-        cell.detailTextLabel?.text = object.price.description
+                
+        cell.descriptionLabel?.text = object.descriptionField
+        
+        let formatter = NSNumberFormatter()
+        formatter.numberStyle = .CurrencyStyle
+        formatter.locale = NSLocale(localeIdentifier: "ru_RU")
+        
+        
+        cell.priceLabel.text = formatter.stringFromNumber(object.price)
         
         return cell
     }
@@ -103,14 +100,7 @@ class CatalogViewController: UITableViewController {
             self.realm.deleteAll()
         }
         let defaults = NSUserDefaults.standardUserDefaults()
-        /*
-        let user = defaults.stringForKey("user")
-        let password = defaults.stringForKey("password")
         
-        let credentialData = "\(user):\(password)".dataUsingEncoding(NSUTF8StringEncoding)!
-        let base64Credentials = credentialData.base64EncodedStringWithOptions([])
-        
-        let headers = ["Authorization": "Basic \(base64Credentials)"]*/
         
         let connector = OdataConnector()
         connector.setCollectionName(NomenclatureCatalog.getCollectionName())
@@ -126,11 +116,6 @@ class CatalogViewController: UITableViewController {
         
         /*let URLString = "http://85.236.15.246/Demo_UT/odata/standard.odata/Catalog_%D0%9D%D0%BE%D0%BC%D0%B5%D0%BD%D0%BA%D0%BB%D0%B0%D1%82%D1%83%D1%80%D0%B0?$format=json"*/
         
-        //test
-        //print(headers)
-        /*let user = "test"
-        let password = "111"*/
-        
         let user = defaults.stringForKey("user")!
         let password = defaults.stringForKey("password")!
         let credentialData = "\(user):\(password)".dataUsingEncoding(NSUTF8StringEncoding)!
@@ -140,10 +125,6 @@ class CatalogViewController: UITableViewController {
         
         //load prices
         connector.setCollectionName(PriceInformationRegister.getCollectionName())
-        
-        
-        
-        
         
         Alamofire.request(.GET, URLString, headers: headers)
             .responseCollection { (response: Response<[NomenclatureCatalog], NSError>) in
@@ -165,60 +146,14 @@ class CatalogViewController: UITableViewController {
                                 })
                             }
                     }
-
-                    
                     
                 }
-                
-                
+                                
                 if let errorData = response.data {
                     let errorJson = JSON(errorData)
                     debugPrint(errorJson)
                 }
         }
-        
-        /*Alamofire.request(.GET, URLString, headers: headers)
-            .responseObject { (response: Response<NomenclatureCatalog, NSError>) in
-                debugPrint(response)
-                if let value = response.result.value {
-                    try! self.realm.write({
-                        self.realm.add(value)
-                    })
-                }
-        }*/
-
-        
-        /*try! realm.write {
-            self.realm.deleteAll()
-        }
-        
-        let user = "test"
-        let password = "111"
-        
-        let credentialData = "\(user):\(password)".dataUsingEncoding(NSUTF8StringEncoding)!
-        let base64Credentials = credentialData.base64EncodedStringWithOptions([])
-        
-        let headers = ["Authorization": "Basic \(base64Credentials)"]
-        
-        Alamofire.request(.GET, "http://85.236.15.246/Demo_UT/odata/standard.odata/Catalog_%D0%9D%D0%BE%D0%BC%D0%B5%D0%BD%D0%BA%D0%BB%D0%B0%D1%82%D1%83%D1%80%D0%B0(guid'9b137475-35ed-11e5-940e-e41f133f24ac')?$format=json", headers: headers)
-            .responseJSON { response in
-                switch response.result {
-                case .Success:
-                    if let value = response.result.value {
-                        
-                        /*let json = JSON(value)
-                        let good = NomenclatureCatalog.fromDictionary(json.dictionaryObject!)
-                        
-                        try! self.realm.write({
-                            self.realm.add(good)
-                        })*/
-                        //try! self.realm.commitWrite()
-                        
-                    }
-                case .Failure(let error):
-                    print(error)
-                }
-        }*/
         
     }
     

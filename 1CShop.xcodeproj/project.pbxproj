@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		306E3D241C1594040095E740 /* SensibleTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306E3D231C1594040095E740 /* SensibleTableView.framework */; };
+		306E3D251C1594040095E740 /* SensibleTableView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 306E3D231C1594040095E740 /* SensibleTableView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		306E3D291C1597D20095E740 /* OrdersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306E3D281C1597D20095E740 /* OrdersTableViewController.swift */; };
+		309EAB611C158331005CEF47 /* OrderDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309EAB601C158331005CEF47 /* OrderDocument.swift */; };
+		309EAB631C158697005CEF47 /* OrderNomenclature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309EAB621C158697005CEF47 /* OrderNomenclature.swift */; };
 		30A9D06D1BF5E497008A2CE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9D06C1BF5E497008A2CE2 /* AppDelegate.swift */; };
 		30A9D06F1BF5E497008A2CE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A9D06E1BF5E497008A2CE2 /* ViewController.swift */; };
 		30A9D0721BF5E497008A2CE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A9D0701BF5E497008A2CE2 /* Main.storyboard */; };
@@ -27,8 +32,27 @@
 		BD05E8E51C0627AC0008AAF0 /* oDataFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD05E8E41C0627AC0008AAF0 /* oDataFilter.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		306E3D261C1594050095E740 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				306E3D251C1594040095E740 /* SensibleTableView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2C58BC7AA5881D794438A86E /* Pods_1CShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_1CShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		306E3D231C1594040095E740 /* SensibleTableView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SensibleTableView.framework; sourceTree = "<group>"; };
+		306E3D271C1594BC0095E740 /* 1cShop-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "1cShop-Bridging-Header.h"; path = "../1cShop-Bridging-Header.h"; sourceTree = "<group>"; };
+		306E3D281C1597D20095E740 /* OrdersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersTableViewController.swift; sourceTree = "<group>"; };
+		309EAB601C158331005CEF47 /* OrderDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDocument.swift; sourceTree = "<group>"; };
+		309EAB621C158697005CEF47 /* OrderNomenclature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderNomenclature.swift; sourceTree = "<group>"; };
 		30A9D0691BF5E497008A2CE2 /* 1CShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1CShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A9D06C1BF5E497008A2CE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30A9D06E1BF5E497008A2CE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +82,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A757871D50501AB84132506B /* Pods_1CShop.framework in Frameworks */,
+				306E3D241C1594040095E740 /* SensibleTableView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,19 +119,23 @@
 		30A9D06B1BF5E497008A2CE2 /* 1CShop */ = {
 			isa = PBXGroup;
 			children = (
+				306E3D271C1594BC0095E740 /* 1cShop-Bridging-Header.h */,
+				30A9D06C1BF5E497008A2CE2 /* AppDelegate.swift */,
 				30F5832E1BFDF77E00298A55 /* PriceInformationRegister.swift */,
 				30F583201BFB0ED300298A55 /* NomenclatureCatalog.swift */,
+				309EAB601C158331005CEF47 /* OrderDocument.swift */,
+				309EAB621C158697005CEF47 /* OrderNomenclature.swift */,
 				30F583291BFDCC0100298A55 /* HomeViewController.swift */,
 				30DBCC1C1C033B5D00494AD5 /* ImageCell.swift */,
 				30F5832A1BFDCC0100298A55 /* ProfileViewController.swift */,
-				30A9D06C1BF5E497008A2CE2 /* AppDelegate.swift */,
+				306E3D281C1597D20095E740 /* OrdersTableViewController.swift */,
+				30F583261BFB237700298A55 /* CatalogViewController.swift */,
 				30A9D06E1BF5E497008A2CE2 /* ViewController.swift */,
 				30A9D0701BF5E497008A2CE2 /* Main.storyboard */,
 				30A9D0731BF5E497008A2CE2 /* Assets.xcassets */,
 				30A9D0751BF5E497008A2CE2 /* LaunchScreen.storyboard */,
 				30A9D0781BF5E497008A2CE2 /* Info.plist */,
 				30F583111BF5FABC00298A55 /* MyApplication.swift */,
-				30F583261BFB237700298A55 /* CatalogViewController.swift */,
 				30DBCC1E1C03474300494AD5 /* TableViewCell.swift */,
 				30DBCC231C045B6700494AD5 /* ImagesViewController.swift */,
 				30DBCC261C05D06A00494AD5 /* User.swift */,
@@ -119,6 +148,7 @@
 		3307AB52BD6B1F0D95F9665A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				306E3D231C1594040095E740 /* SensibleTableView.framework */,
 				2C58BC7AA5881D794438A86E /* Pods_1CShop.framework */,
 			);
 			name = Frameworks;
@@ -137,6 +167,7 @@
 				30A9D0671BF5E497008A2CE2 /* Resources */,
 				2E542CCE177D6F6917E98042 /* Embed Pods Frameworks */,
 				07EC5E1D7CEACD6DE77739EA /* Copy Pods Resources */,
+				306E3D261C1594050095E740 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -249,6 +280,7 @@
 				30F583271BFB237700298A55 /* CatalogViewController.swift in Sources */,
 				30A9D06F1BF5E497008A2CE2 /* ViewController.swift in Sources */,
 				30DBCC1D1C033B5D00494AD5 /* ImageCell.swift in Sources */,
+				309EAB611C158331005CEF47 /* OrderDocument.swift in Sources */,
 				30F583121BF5FABC00298A55 /* MyApplication.swift in Sources */,
 				30A9D06D1BF5E497008A2CE2 /* AppDelegate.swift in Sources */,
 				BD05E8E31C06263D0008AAF0 /* OdataConnector.swift in Sources */,
@@ -256,10 +288,12 @@
 				BD05E8E51C0627AC0008AAF0 /* oDataFilter.swift in Sources */,
 				30DBCC1F1C03474300494AD5 /* TableViewCell.swift in Sources */,
 				30DBCC241C045B6700494AD5 /* ImagesViewController.swift in Sources */,
+				309EAB631C158697005CEF47 /* OrderNomenclature.swift in Sources */,
 				30F5832C1BFDCC0100298A55 /* ProfileViewController.swift in Sources */,
 				30F583211BFB0ED300298A55 /* NomenclatureCatalog.swift in Sources */,
 				30F5832B1BFDCC0100298A55 /* HomeViewController.swift in Sources */,
 				30F5832F1BFDF77E00298A55 /* PriceInformationRegister.swift in Sources */,
+				306E3D291C1597D20095E740 /* OrdersTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +413,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "rightway.-CShop";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "1cShop-Bridging-Header";
 			};
 			name = Debug;
 		};
@@ -395,6 +430,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "rightway.-CShop";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "1cShop-Bridging-Header";
 			};
 			name = Release;
 		};

@@ -14,10 +14,14 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
     
+    
+    @IBOutlet weak var descriptionLabel: UILabel!
     /*cell.textLabel?.text = object.code
     cell.detailTextLabel?.text = object.price.description
     
     cell.imageView?.image = imageCache.imageWithIdentifier(object.файлКартинкиKey)*/
+    
+    @IBOutlet weak var priceLabel: UILabel!
     
     
 }
